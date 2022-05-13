@@ -45,9 +45,6 @@ jobs:
           # Note: tags has to be all lower-case
           # ISSUE: looks like not really pushing the new version of the image to registry
           #tags: ${{ steps.meta.outputs.tags }}
-          # It works OK, but hadrdcoded data
-          #tags: |
-          #  ghcr.io/jlegido/docker-openssh-server:latest
           tags: |
             ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{env.VERSION}}
 
