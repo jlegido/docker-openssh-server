@@ -12,6 +12,11 @@ jobs:
   build-and-push-docker-image:
     name: Build Docker image and push to repositories
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # To avoid:
+      # error: denied: installation not allowed to Create organization package
+      packages: write
 
     steps:
       - name: Checkout repository
