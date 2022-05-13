@@ -49,7 +49,7 @@ jobs:
           #tags: |
           #  ghcr.io/jlegido/docker-openssh-server:latest
           tags: |
-            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${env.VERSION}
+            ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}:${{env.VERSION}}
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
