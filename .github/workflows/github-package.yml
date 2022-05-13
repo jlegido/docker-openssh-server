@@ -42,9 +42,9 @@ jobs:
           context: .
           push: true
           # Note: tags has to be all lower-case
-          #tags: ${{ steps.meta.outputs.tags }}
-          tags: |
-            ghcr.io/jlegido/docker-openssh-server:latest
+          tags: ${{ steps.meta.outputs.tags }}
+          #tags: |
+          #  ghcr.io/jlegido/docker-openssh-server:latest
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
